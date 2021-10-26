@@ -4,7 +4,7 @@
 cd /opt/newsroom/
 
 # wait for elastic to be up
-printf 'waiting for elastic.'
+printf "waiting for elastic on ${ELASTICSEARCH_URL}"
 until $(curl --output /dev/null --silent --head --fail "${ELASTICSEARCH_URL}"); do
     printf '.'
     sleep .5
