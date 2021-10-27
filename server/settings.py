@@ -13,7 +13,6 @@ CONTACT_ADDRESS = '/contact_us'
 
 BLUEPRINTS.extend([
     'tga.register',
-    'tga.public',
 ])
 
 LANGUAGES = ['en']
