@@ -7,7 +7,9 @@ $start = <<SCRIPT
 export LC_ALL=C
 export DEBIAN_FRONTEND=noninteractive 
 
-apt-get update && apt-get install -yy --no-install-recommends docker docker-compose
+systemctl stop snapd
+
+apt-get update && apt-get install -yy --no-install-recommends docker.io docker-compose
 
 cd /vagrant
 
@@ -27,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline: $start, run: "always"
 
   config.vm.provider "virtualbox" do |v|
-    v.memory = 2048
+    v.memory = 4096
     v.cpus = 2
   end
 end
