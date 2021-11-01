@@ -1,21 +1,17 @@
-Hei {{app_name}}-ylläpitäjä,
+Hi {{app_name}} Administrator,
 
-Uusi käyttäjä on kiinnostunut Mediapankista:
+There's a new sign-up request with the following details:
 
-
-Etusivu:     {{user.first_name}}
-Sukunimi:      {{user.last_name}}
-Sähköposti:          {{user.email}}
-Puhelin:      {{user.phone}}
-Maa:        {{user.country}}
-Yhtiö:        {{user.company}}
-Rooli:     {{user.occupation}}
-Yhtiön koko:   {{user.company_size}}
+Name:         {{user.name}}
+Company:      {{user.company}}
+Position:     {{user.position}}
+Email:        {{user.email}}
+Country:      {{user.country}}
+Referred By:
+{{user.referred_by}}
 
 
-Siirry osoitteeseen {{url}} luodaksesi uuden käyttäjän.
+Please go to {{url}} to create a new user.
 
-
-Terveisin,
+Regards,
 {{app_name}}
-
