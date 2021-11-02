@@ -24,7 +24,8 @@ services:
             - "5050:5050"
             - "5150:5150"
         volumes:
-            - ./server/theme:/opt/newsroom/theme:ro
+          - ./server/theme:/opt/newsroom/theme:ro
+          - ./dump:/opt/newsroom/dump:ro
         networks:
             - newsroom
         depends_on:

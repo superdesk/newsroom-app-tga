@@ -1,20 +1,12 @@
-/* STT theme css */
+/* TGA theme css */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i');
-
-.font-stt {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 0.875rem;
-}
-.font-stt--big {
-    font-size: 1.25rem;
-}
 .navbar__logo {
-    max-width: 230px;
+    max-width: 270px;
     padding: 0 0 0 0.5rem;
+    justify-content: flex-start;
 }
 .navbar__logo img {
-    max-width: 80px;
+    max-width: 70px;
 }
 .navbar__logo a {
     display: flex;
@@ -25,24 +17,25 @@
     text-decoration: none;
     color: #969696;
 }
-
 .navbar__logo a span {
     padding-top: 2px;
+    font-size: 14px;
 }
 .wire-column__nav__tab a {
     padding: .5rem .6rem;
 }
 
 @media only screen and (min-width: 576px) {
-    .font-stt {
-        font-size: 1rem;
-    }
-    .font-stt--big {
-        font-size: 1.25rem;
-    }
     .navbar__logo {
-        max-width: 230px;
-        padding: 0 0.5rem 0 1.2rem;
+        padding: 0 0.5rem;
+    }
+    .navbar__logo a span {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .navbar-brand {
+        margin-top: 3.5px;
     }
 }
 @media only screen and (min-width: 992px) {
