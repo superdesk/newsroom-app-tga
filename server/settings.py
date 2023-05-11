@@ -1,5 +1,6 @@
 import pathlib
-from newsroom.web.default_settings import BLUEPRINTS as DEFAULT_BLUEPRINTS, env, strtobool, CLIENT_CONFIG, CORE_APPS as DEFAULT_CORE_APPS
+from newsroom.web.default_settings import BLUEPRINTS as DEFAULT_BLUEPRINTS, env, strtobool, CLIENT_CONFIG, \
+    CORE_APPS as DEFAULT_CORE_APPS
 
 SERVER_PATH = pathlib.Path(__file__).resolve().parent
 CLIENT_PATH = SERVER_PATH.parent.joinpath("client")
@@ -11,8 +12,6 @@ SIGNUP_EMAIL_RECIPIENTS = "info@360info.org"
 HIDE_LOGIN = strtobool(env("HIDE_LOGIN", "True"))
 CONTACT_ADDRESS = "/contact_us"
 TERMS_AND_CONDITIONS = "/page/terms"
-
-
 
 CORE_APPS = [
     app
