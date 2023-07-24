@@ -55,3 +55,30 @@ CLIENT_LOCALE_FORMATS = {
         "DATE_FORMAT_HEADER": "EEEE, MMMM d, yyyy",
     },
 }
+
+COMPANY_TYPES = [
+    dict(
+        id="news_media",
+        name="News Media",
+    ),
+    dict(
+        id="education",
+        name="Education",
+    ),
+    dict(
+        id="research",
+        name="Research",
+    ),
+    dict(
+        id="government_public_sector",
+        name="Government/Public Sector",
+    ),
+    dict(
+        id="ngo",
+        name="Non-Profit/NGO",
+    ),
+    dict(
+        id="other",
+        name="Other",
+    ),
+]
