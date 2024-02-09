@@ -1,7 +1,7 @@
 {% extends "base_layout.html" %}
 
 {% block topnav_navbar %}
-{% if session.get('name') %}
+    {% if session.get('name') %}
     <div class="navbar__right">
         <div class="navbar__date">{{ get_date() | date_header }}</div>
         <div class="navbar-notifications" id="header-notification"></div>

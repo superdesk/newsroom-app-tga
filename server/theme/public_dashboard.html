@@ -1,0 +1,13 @@
+{% extends "public_dashboard_base.html" %}
+
+{% block meta %}
+<meta property="og:title" content="Newshub - 360info" />
+<meta property="twitter:title" content="Newshub - 360info" />
+<meta property="og:site_name" content="360info" />
+<meta property="og:url" content="https://newshub.360info.org" />
+<meta property="twitter:url" content="https://newshub.360info.org" />
+<meta property="og:type" content="website" />
+<meta property="twitter:card" content="summary" />
+<meta property="og:image" content="{{ url_for('theme', filename='360social.png') }}" />
+<meta property="twitter:image" content="{{ url_for('theme', filename='360social.png') }}" />
+{% endblock %}
