@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {registerExtensions} from 'newsroom-core/assets/index';
+import {registerExtensions} from 'newsroom-core';
 import {CopyEmbedCodeBanner} from './copy-embed-code-banner';
 
 registerExtensions({
     prepareWirePreview: (previewHtmlElement, article) => {
+
         for (const embedBlockHtmlElement of previewHtmlElement.querySelectorAll('.embed-block')) {
-            const embeddedArticleId = embedBlockHtmlElement.getAttribute('data-association-key');
+            const embeddedArticleId = embedBlockHtmlElement.getAttribute('data-association-key') || embedBlockHtmlElement.parentElement?.getAttribute('data-association-key');
 
             if (embeddedArticleId == null) {
                 continue;
@@ -18,7 +19,7 @@ registerExtensions({
                 continue;
             }
 
-            const licenseName = (embeddedArticle.subject ?? []).find(({scheme}) => scheme === 'licence_type')?.name;
+            const licenseName = (embeddedArticle.subject ?? []).find(({scheme}) => scheme === 'licence_type')?.name ?? 'Creative Commons';
 
             if (licenseName == null) {
                 continue;
@@ -47,6 +48,5 @@ registerExtensions({
         }
 
         return previewHtmlElement;
-
     }
 });

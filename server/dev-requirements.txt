@@ -11,3 +11,4 @@ httmock
 wooper
 mypy
 typing_extensions>=3.7.4
+types-docutils
