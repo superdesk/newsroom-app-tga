@@ -5,6 +5,7 @@ from newsroom.web.default_settings import (
     strtobool,
     CLIENT_CONFIG,
     CORE_APPS as DEFAULT_CORE_APPS,
+    WIRE_SEARCH_FIELDS,
 )
 
 SERVER_PATH = pathlib.Path(__file__).resolve().parent
@@ -97,3 +98,5 @@ COMPANY_TYPES = [
 ]
 
 PUBLIC_DASHBOARD = True
+
+WIRE_SEARCH_FIELDS.append("authors.name")
