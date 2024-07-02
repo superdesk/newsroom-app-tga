@@ -9,6 +9,7 @@
     </div>
     {% else %}
     <div class="navbar__right navbar__right--login">
+        <a class="nav-link d-none d-md-block" href="{{ url_for('auth.login') }}">{{ gettext('Login') }}</a>
         <a class="nav-link d-none d-md-block" href="{{ url_for('auth.signup') }}">{{ gettext('Register') }}</a>
         <a class="nav-link" href="https://360info.org/about-us/" target="_blank">{{ gettext('About Us') }}</a>
         <a class="nav-link" href="https://360info.org/about-us/our-charter/" target="_blank">{{ gettext('Charter') }}</a>
