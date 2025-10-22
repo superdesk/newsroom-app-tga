@@ -279,7 +279,7 @@ pyparsing==3.1.2
     # via
     #   httplib2
     #   pyrtf3
-pypdf==4.2.0
+pypdf==6.1.3
     # via xhtml2pdf
 pypng==0.20220715.0
     # via qrcode
